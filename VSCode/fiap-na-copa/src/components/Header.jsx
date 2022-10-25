@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from "react-router-dom";
+import './style/style.css'
 
 export default function Header() {
 
@@ -20,17 +21,20 @@ const sinal = ()=>{
     <h1>FIAP</h1>
     {cliente ? 
     <div className='menu'>
-        <span>{cliente}<button onClick={logout}>logout</button> | </span> 
-        <Link onClick={sinal} to="/home">home</Link> |  
-        <Link to="/figuInter">Figurinhas internacionais</Link> |  
-        <Link to="/figuNacio">Figurinha nacionais</Link>
+        <div className='logout'>
+            <span className='itemLogout' >{cliente}</span>
+            <button className ='itemLogout' onClick={logout}>logout</button>
+        </div> 
+        <Link className='item' to="/home">home</Link>   
+        <Link className='item' to="/figuInter">Figurinhas internacionais</Link>   
+        <Link className='item' to="/figuNacio">Figurinha nacionais</Link>
     </div>
     :
     <div className='menu'> 
-    <span><Link to="/">login</Link> | </span>
-    <Link onClick={sinal}>home</Link> |  
-    <Link onClick={sinal}>Figurinhas internacionais</Link> |  
-    <Link onClick={sinal}>Figurinha nacionais</Link>
+    <Link className='item' to="/">login</Link>
+    <Link className='item' onClick={sinal}>home</Link>  
+    <Link className='item' onClick={sinal}>Figurinhas internacionais</Link> 
+    <Link className='item' onClick={sinal}>Figurinha nacionais</Link>
     </div>} 
   </header> 
     );
