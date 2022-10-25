@@ -1,0 +1,15 @@
+package br.com.fiap.teste;
+
+import br.com.fiap.BO.ClienteBO;
+import br.com.fiap.TO.ClienteTO;
+
+public class ClienteTeste {
+
+	public static void main(String[] args) {
+		
+	ClienteTO ct = new ClienteTO("manaco","naco");
+	ClienteBO cb = new ClienteBO();
+	
+	System.out.println(cb.logar(ct).getLogin());
+	}
+}

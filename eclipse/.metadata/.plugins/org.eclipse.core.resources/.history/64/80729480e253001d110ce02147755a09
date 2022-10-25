@@ -1,0 +1,14 @@
+package br.com.fiap.resource;
+
+import javax.ws.rs.POST;
+import javax.ws.rs.Path;
+
+@Path("/Login")
+public class ClienteResource {
+
+	
+	@POST
+	@Consumes(MediaType.APPLICATION_JSON)
+	@Produces(MediaType.APPLICATION_JSON)
+
+}

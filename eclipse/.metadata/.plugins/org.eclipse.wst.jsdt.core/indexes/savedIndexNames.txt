@@ -1,0 +1,6 @@
+INDEX VERSION 1.4+C:\Users\Brunin\Desktop\CP6-RWD\eclipse\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes
+2774202030.index
+796095647.index
+3556467586.index
+306190753.index
+2391639719.index

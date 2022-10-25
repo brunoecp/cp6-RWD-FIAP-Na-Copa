@@ -1,0 +1,54 @@
+package br.com.fiap.DAO;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import br.com.fiap.TO.ClienteTO;
+
+public class ClienteDAO {
+
+	public static List<ClienteTO> listaClientes;
+
+	public ClienteDAO() {
+		if (listaClientes == null) {
+			listaClientes = new ArrayList<ClienteTO>();
+			
+			ClienteTO cto = new ClienteTO();
+			cto.setLogin("teste");
+			cto.setSenha("teste");
+			cto.setRm("00001");
+			cto.setNome("nome");
+			listaClientes.add(cto);
+			
+			cto = new ClienteTO();
+			cto.setLogin("ale");
+			cto.setSenha("xandre");
+			cto.setRm("pf0670");
+			cto.setNome("alexandre");
+			listaClientes.add(cto);
+			
+			cto = new ClienteTO();
+			cto.setLogin("1");
+			cto.setSenha("2");
+			cto.setRm("12345");
+			cto.setNome("numerico");
+			listaClientes.add(cto);
+		}
+	}
+
+	public ClienteTO loginDAO(ClienteTO u) {
+		for (int i = 0; i < listaClientes.size(); i++) {
+			if (listaClientes.get(i).getLogin().equals(u.getLogin())
+					&& listaClientes.get(i).getSenha().equals(u.getSenha())
+				    && listaClientes.get(i).getRm().equals(u.getRm())
+				    && listaClientes.get(i).getNome().equals(u.getNome())) {
+				System.out.println("Validado");
+				return listaClientes.get(i);
+			
+			}
+		}
+		System.out.println("Nao validado");
+		return null;
+		
+	}
+}

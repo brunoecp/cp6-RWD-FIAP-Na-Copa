@@ -1,0 +1,21 @@
+package br.com.fiap.DAO;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import br.com.fiap.TO.ClienteTO;
+
+public class ClienteDAO {
+
+	public static List<ClienteTO> cliente;
+	
+	public ClienteDAO() {
+		if(cliente == null) {
+			cliente = new ArrayList<ClienteTO>();
+			
+			ClienteTO cto = new ClienteTO();
+			cto.setLogin("teste");
+			cto.setSenha("");
+		}
+	}
+}

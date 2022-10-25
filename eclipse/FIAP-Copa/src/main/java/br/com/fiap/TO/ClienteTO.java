@@ -1,0 +1,49 @@
+package br.com.fiap.TO;
+
+import javax.xml.bind.annotation.XmlRootElement;
+
+@XmlRootElement
+public class ClienteTO {
+	
+	private String login;
+	private String senha;
+	private String rm;
+	private String nome;
+	
+	public ClienteTO() {
+		
+	}
+	public ClienteTO(String login, String senha, String rm, String nome) {
+		this.login = login;
+		this.senha = senha;
+		this.setRm(rm);
+		this.setNome(nome);
+	}
+	public String getLogin() {
+		return login;
+	}
+	public void setLogin(String login) {
+		this.login = login;
+	}
+	public String getSenha() {
+		return senha;
+	}
+	public void setSenha(String senha) {
+		this.senha = senha;
+	}
+	public String getRm() {
+		return rm;
+	}
+	public void setRm(String rm) {
+		this.rm = rm;
+	}
+	public String getNome() {
+		return nome;
+	}
+	public void setNome(String nome) {
+		this.nome = nome;
+	}
+	
+	
+
+}
